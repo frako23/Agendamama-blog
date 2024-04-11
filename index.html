@@ -8,7 +8,7 @@
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="shortcut icon" href="img/logo.png" type="image/png" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/fontAwesome.css">
@@ -147,23 +147,21 @@
                 </div>
             </div>
             <div class="widget">
-            
+                <!-- ----------------------------- WEATHER APP ----------------------------- -->
                 <div class="left-panel panel">
-                    <div class="date">
+                    <!-- <div class="date">
                         Monday, 20 Aug 2018
-                    </div>
+                    </div> -->
                     <div class="city">
                         Mumbai
                     </div>
                     <div class="temp">
-                       <img src="https://codefrog.space/cp/wp/ts.png" alt="" width="60">
-                       27&deg;
+                        <img src="https://codefrog.space/cp/wp/ts.png" alt="" width="60" class="weather-icon">
+                        <span class="inner-temp">27</span>°C
                     </div>
                 </div>
-
-    
+                <!-- --------------------------- FIN WEATHER APP --------------------------- -->
             </div>
-    
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="featured-item">
@@ -178,7 +176,6 @@
                                     <li><i class="fa fa-star"></i></li>
                                 </ul>
                             </div>
-
                         </div>
                         <div class="down-content">
                             <h4>Diversión al aire libre</h4>
@@ -1003,6 +1000,31 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script>
+
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&lat=10.44&lon=-66.84&appid=732be3ab6a996a56a4cb76e24a5defb2"
+        const weatherIcon = document.querySelector(".weather-icon")
+        async function checkWeather() {
+            const response = await fetch(apiUrl)
+            const data = await response.json()
+            console.log(data);
+            document.querySelector(".city").innerHTML = data.name;
+            document.querySelector(".inner-temp").innerHTML = Math.round(data.main.temp);
+
+            if (data.weather[0].main == "Clouds") {
+                weatherIcon.src = "img/images/clouds.png"
+            } else if (data.weather[0].main == "Clear") {
+                weatherIcon.src = "img/images/clear.png"
+            } else if (data.weather[0].main == "Rain") {
+                weatherIcon.src = "img/images/rain.png"
+            } else if (data.weather[0].main == "Drizzle") {
+                weatherIcon.src = "img/images/drizzle.png"
+            } else if (data.weather[0].main == "Mist") {
+                weatherIcon.src = "img/images/mist.png"
+            }
+        }
+        checkWeather()
+    </script>
 </body>
 
 </html>
