@@ -794,12 +794,31 @@
 
             </div>
         </div>
-
-
+        <a style="cursor: pointer; color: white" class="back-to-top">
+            flecha
+        </a>
         </div>
         </div>
     </section>
-
+    <!-- about -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="titlepage">
+                        <h2> Acerca de mí</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour, or randomised words which don't look
+                            even slightly believable. If you are There are many variations of passages of Lorem Ipsum
+                            available, but the majority have suffered alteration in some form, by injected humour, or
+                            randomised words which don't look even slightly believable. If you are </p>
+                        <a class="read_more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
     <!-- ------------------------------- MARCAS -------------------------------- -->
     <!-- <div id="client">
         <div class="container">
@@ -1000,7 +1019,7 @@
     <script type="text/javascript" src="js/owl.carousel.js"></script>
     <script>
 
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&lat=10.44&lon=-66.84&appid=732be3ab6a996a56a4cb76e24a5defb2"
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=10.44&lon=-66.84&appid=732be3ab6a996a56a4cb76e24a5defb2`
         const weatherIcon = document.querySelector(".weather-icon")
         async function checkWeather() {
             const response = await fetch(apiUrl)
