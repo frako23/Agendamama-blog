@@ -83,7 +83,7 @@ section {
 }
 
 .cf {
-  *zoom: 1;
+  zoom: 1;
 }
 
 #header {
@@ -138,6 +138,7 @@ section {
 
 #header .logo {
   float: left;
+  width: 9rem;
 }
 
 #header .logo img {
@@ -1019,7 +1020,7 @@ section.contact .section-heading {
   width: 60%;
   margin: 0 auto;
   background-color: #fff;
-  //background-color: #fff;
+  background-color: #fff;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .modal-animated-in {
@@ -1091,6 +1092,7 @@ footer .footer-heading h4 {
 
 footer .about-veno .logo {
   margin-bottom: 40px;
+  width: 10rem;
 }
 
 footer .about-veno ul li a {
@@ -1488,4 +1490,65 @@ background:#e73131;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 3rem
+}
+
+
+div.widget
+{
+  position: relative;
+  /* width: 355px;
+  height: 125px; */
+  /* margin: 150px auto; */
+  background-color: #fcfdfd;
+  /* border-radius: 9px; */
+  padding: 25px;
+  padding-right: 30px;
+  box-shadow: 0px 31px 35px -26px #080c21;
+}
+
+
+div.date
+{
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0,0,0,0.5);
+}
+
+div.city
+{
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 5px;
+  color: rgba(0,0,0,0.7);
+}
+
+div.temp
+{
+  font-size: 81px;
+  color: rgba(0,0,0,0.9);
+  font-weight: 100;
+}
+
+div.panel
+{
+  display: inline-block;
+}
+
+div.right-panel
+{
+  position: absolute;
+  float: right;
+  top: 0;
+  margin-top: 35px;
+  padding-left: 10px;
+}
+
+
+
+
+#btnDownload img
+{
+  width: 135px;
+  
 }
