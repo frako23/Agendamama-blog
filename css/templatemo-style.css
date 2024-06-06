@@ -24,9 +24,9 @@ p {
   left: 0.25px;
 }
 
-section {
+/* section {
   padding-top: 80px;
-}
+} */
 
 
 .section-heading {
@@ -136,12 +136,12 @@ section {
   border: none;
 }
 
-#header .logo {
+.logo {
   float: left;
-  width: 9rem;
+  width: 4rem;
 }
 
-#header .logo img {
+.logo img {
   width: 100%;
   overflow: hidden;
 }
